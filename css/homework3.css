@@ -1,0 +1,98 @@
+
+/* text Lucida Grande with sans-serif fallback */
+*{font-family: "Quicksand",sans-serif;}
+
+/* header to 2em, each line to 1.5em and dark red */
+h1{
+  font-size: 2em;
+  line-height: 1.5em;
+  color: darkred;
+}
+
+/* paragraphs to "black", 18px, 15px padding on the top only */
+p{
+  color: black;
+  font-size: 18px;
+  padding-top: 15px;
+}
+
+/* sets links to be 18px, darkred with an underline */
+a{
+  font-size:18px;
+  color: darkred;
+  text-decoration:underline;
+}
+
+/* applies 1px solid red border to focused elements and removes outline box */
+a:focus{
+  border: 1px solid red;
+  outline:none;
+}
+
+/* adds a background image, no repeating and light grey fallback color */
+body{
+  background-image:url(../images/pidgeon-background.jpg);
+  background-color: #dddddd;
+  background-repeat:no-repeat;
+  margin-left: 20px;
+}
+
+
+/* border with round corners */
+table{
+  border:2px solid black;
+  border-radius:10px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+
+
+/* rounds the border of each corner cell with 10px radius */
+thead tr th:first-child{ border-top-left-radius: 10px;}  /*top left*/
+thead tr th:last-child{border-top-right-radius: 10px;}   /*top right*/
+tbody tr:last-child th:first-child{border-bottom-left-radius: 10px;} /*bottom left*/
+tbody tr:last-child td:last-child{border-bottom-right-radius: 10px;} /*bottom right*/
+
+/* column headers always be at least 150px wide with 10px padding. white, centered, and uppercased text with dark red background */
+thead .colhead{
+  background-color: darkred;
+  min-width: 150px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+/* table row headers and cells have centered text with a 2px black border on top only and 15px padding on all sides */
+tbody .rowhead, tbody tr td{
+  text-align: center;
+  border-top: 2px solid black;
+  padding: 15px;
+}
+
+/* even numbered rows have grey background, odd numbered rows have transparent background */
+tr:nth-child(even){ background-color:#dddddd;}
+tr:nth-child(odd) { background-color:transparent;}
+
+/* changes background color of a row to light red when hovered over */
+tr:hover{background-color: #fab9cf;}
+
+
+/* makes footer text white on a black background. Sets the footer to always be at the bottom of the browser window and makes sure the footer is always at least 60px tall */
+
+main{
+  margin-bottom:100px ;
+}
+footer{
+  position: relative;
+  bottom: 0;
+
+}
+footer p{
+  color: white;
+  background-color: black;
+  text-align: center;
+  min-height: 60px;
+}
